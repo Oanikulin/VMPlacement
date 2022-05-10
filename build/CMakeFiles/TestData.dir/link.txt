@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/TestData.dir/DataAnalysis/main.cpp.o CMakeFiles/TestData.dir/structures.cpp.o  -o TestData 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/BestFitDecreasingSimulator.dir/best_fit_decreasing/main.cpp.o CMakeFiles/BestFitDecreasingSimulator.dir/best_fit_decreasing/solver.cpp.o CMakeFiles/BestFitDecreasingSimulator.dir/structures.cpp.o  -o BestFitDecreasingSimulator -lpthread 

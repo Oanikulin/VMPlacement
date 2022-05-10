@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/FirstFitDecreasingSimulator.dir/first_fit_decreasing/main.cpp.o CMakeFiles/FirstFitDecreasingSimulator.dir/first_fit_decreasing/solver.cpp.o CMakeFiles/FirstFitDecreasingSimulator.dir/structures.cpp.o  -o FirstFitDecreasingSimulator 

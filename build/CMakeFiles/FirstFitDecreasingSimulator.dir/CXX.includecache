@@ -1,0 +1,68 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/My documents/Simulator/first_fit_decreasing/main.cpp
+iostream
+-
+iomanip
+-
+vector
+-
+memory
+-
+../isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+solver.hpp
+/mnt/d/My documents/Simulator/first_fit_decreasing/solver.hpp
+
+/mnt/d/My documents/Simulator/first_fit_decreasing/solver.cpp
+solver.hpp
+/mnt/d/My documents/Simulator/first_fit_decreasing/solver.hpp
+algorithm
+-
+vector
+-
+iostream
+-
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/first_fit_decreasing/solver.hpp
+vector
+-
+../isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/isolver.hpp
+vector
+-
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/structures.cpp
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+iostream
+-
+fstream
+-
+vector
+-
+
+/mnt/d/My documents/Simulator/structures.hpp
+cassert
+-
+fstream
+-
+vector
+-
+

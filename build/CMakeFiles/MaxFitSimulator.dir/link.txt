@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/MaxFitSimulator.dir/max_fit/main.cpp.o CMakeFiles/MaxFitSimulator.dir/max_fit/solver.cpp.o CMakeFiles/MaxFitSimulator.dir/structures.cpp.o  -o MaxFitSimulator -lpthread 
