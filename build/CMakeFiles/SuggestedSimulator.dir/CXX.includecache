@@ -1,0 +1,120 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/My documents/Simulator/baseline_solver/baseline_solver.cpp
+baseline_solver.hpp
+/mnt/d/My documents/Simulator/baseline_solver/baseline_solver.hpp
+vector
+-
+deque
+-
+exception
+-
+iostream
+-
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/baseline_solver/baseline_solver.hpp
+vector
+-
+algorithm
+-
+map
+-
+../isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/isolver.hpp
+vector
+-
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/modified_solver/main.cpp
+iostream
+-
+iomanip
+-
+vector
+-
+memory
+-
+../isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+modified_solver.hpp
+/mnt/d/My documents/Simulator/modified_solver/modified_solver.hpp
+../run.hpp
+/mnt/d/My documents/Simulator/run.hpp
+
+/mnt/d/My documents/Simulator/modified_solver/modified_solver.cpp
+modified_solver.hpp
+/mnt/d/My documents/Simulator/modified_solver/modified_solver.hpp
+vector
+-
+deque
+-
+exception
+-
+iostream
+-
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/modified_solver/modified_solver.hpp
+vector
+-
+algorithm
+-
+map
+-
+../isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+../structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+../baseline_solver/baseline_solver.hpp
+/mnt/d/My documents/Simulator/baseline_solver/baseline_solver.hpp
+
+/mnt/d/My documents/Simulator/run.hpp
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+iostream
+-
+iomanip
+-
+vector
+-
+memory
+-
+chrono
+-
+
+/mnt/d/My documents/Simulator/structures.cpp
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+iostream
+-
+fstream
+-
+vector
+-
+
+/mnt/d/My documents/Simulator/structures.hpp
+cassert
+-
+fstream
+-
+vector
+-
+

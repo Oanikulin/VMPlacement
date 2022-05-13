@@ -66,3 +66,27 @@ double get_cpu_utilisation(const std::vector<Host>& in) {
     }
     return (total - available) / total;
 }
+
+double get_memory_utilisation(const std::vector<Host>& in) {
+    double total = 0;
+    double available = 0;
+    for (const auto& tmp : in) {
+        if (!tmp.is_active) {
+            continue;
+        }
+        total += tmp.m_max_limit;
+        available += tmp.m_limit;
+    }
+    return (total - available) / total;
+}
+
+int get_active_hosts_count(const std::vector<Host>& in) {
+    int cnt = 0;
+    for (const auto& tmp : in) {
+        if (!tmp.is_active) {
+            continue;
+        }
+        cnt += 1;
+    }
+    return cnt;
+}

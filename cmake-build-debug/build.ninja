@@ -280,6 +280,17 @@ build BestFitDecreasingSimulator.exe: CXX_EXECUTABLE_LINKER__BestFitDecreasingSi
   TARGET_IMPLIB = libBestFitDecreasingSimulator.dll.a
   TARGET_PDB = BestFitDecreasingSimulator.exe.dbg
 
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D "D:\My documents\Simulator\cmake-build-debug" && "D:\My documents\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
 # =============================================================================
 # Object build statements for EXECUTABLE target BestFitSimulator
 
@@ -328,16 +339,60 @@ build BestFitSimulator.exe: CXX_EXECUTABLE_LINKER__BestFitSimulator_Debug CMakeF
   TARGET_IMPLIB = libBestFitSimulator.dll.a
   TARGET_PDB = BestFitSimulator.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target SuggestedSimulator
+
 
 #############################################
-# Utility command for edit_cache
+# Order-only phony target for SuggestedSimulator
 
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "D:\My documents\Simulator\cmake-build-debug" && "D:\My documents\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
-  restat = 1
+build cmake_object_order_depends_target_SuggestedSimulator: phony || CMakeFiles/SuggestedSimulator.dir
 
-build edit_cache: phony CMakeFiles/edit_cache.util
+build CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/modified_solver/main.cpp || cmake_object_order_depends_target_SuggestedSimulator
+  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\modified_solver\main.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\SuggestedSimulator.dir\modified_solver
+
+build CMakeFiles/SuggestedSimulator.dir/modified_solver/baseline_solver.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/modified_solver/baseline_solver.cpp || cmake_object_order_depends_target_SuggestedSimulator
+  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\modified_solver\baseline_solver.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\SuggestedSimulator.dir\modified_solver
+
+build CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/baseline_solver/baseline_solver.cpp || cmake_object_order_depends_target_SuggestedSimulator
+  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\baseline_solver\baseline_solver.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\SuggestedSimulator.dir\baseline_solver
+
+build CMakeFiles/SuggestedSimulator.dir/structures.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/structures.cpp || cmake_object_order_depends_target_SuggestedSimulator
+  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\structures.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\SuggestedSimulator.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target SuggestedSimulator
+
+
+#############################################
+# Link the executable SuggestedSimulator.exe
+
+build SuggestedSimulator.exe: CXX_EXECUTABLE_LINKER__SuggestedSimulator_Debug CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.obj CMakeFiles/SuggestedSimulator.dir/modified_solver/baseline_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/structures.cpp.obj
+  FLAGS = -std=c++17 -pthread -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = SuggestedSimulator.exe
+  TARGET_IMPLIB = libSuggestedSimulator.dll.a
+  TARGET_PDB = SuggestedSimulator.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target TestData
@@ -407,6 +462,8 @@ build FirstFitSimulator: phony FirstFitSimulator.exe
 
 build MaxFitSimulator: phony MaxFitSimulator.exe
 
+build SuggestedSimulator: phony SuggestedSimulator.exe
+
 build TestData: phony TestData.exe
 
 # =============================================================================
@@ -417,7 +474,7 @@ build TestData: phony TestData.exe
 #############################################
 # Folder: D:/My documents/Simulator/cmake-build-debug
 
-build all: phony BaselineSimulator.exe MaxFitSimulator.exe FirstFitSimulator.exe FirstFitDecreasingSimulator.exe BestFitDecreasingSimulator.exe BestFitSimulator.exe TestData.exe
+build all: phony BaselineSimulator.exe MaxFitSimulator.exe FirstFitSimulator.exe FirstFitDecreasingSimulator.exe BestFitDecreasingSimulator.exe BestFitSimulator.exe SuggestedSimulator.exe TestData.exe
 
 # =============================================================================
 # Built-in targets

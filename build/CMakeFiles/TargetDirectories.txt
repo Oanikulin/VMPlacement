@@ -1,5 +1,6 @@
 /mnt/d/My documents/Simulator/build/CMakeFiles/rebuild_cache.dir
 /mnt/d/My documents/Simulator/build/CMakeFiles/TestData.dir
+/mnt/d/My documents/Simulator/build/CMakeFiles/SuggestedSimulator.dir
 /mnt/d/My documents/Simulator/build/CMakeFiles/MaxFitSimulator.dir
 /mnt/d/My documents/Simulator/build/CMakeFiles/BestFitSimulator.dir
 /mnt/d/My documents/Simulator/build/CMakeFiles/edit_cache.dir

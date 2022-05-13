@@ -3,7 +3,8 @@ D:/My documents/Simulator/cmake-build-debug/CMakeFiles/MaxFitSimulator.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/FirstFitSimulator.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/FirstFitDecreasingSimulator.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/BestFitDecreasingSimulator.dir
-D:/My documents/Simulator/cmake-build-debug/CMakeFiles/BestFitSimulator.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/My documents/Simulator/cmake-build-debug/CMakeFiles/BestFitSimulator.dir
+D:/My documents/Simulator/cmake-build-debug/CMakeFiles/SuggestedSimulator.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/TestData.dir
 D:/My documents/Simulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

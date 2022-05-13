@@ -40,6 +40,13 @@ find_package (Threads)
 target_include_directories(MaxFitSimulator PUBLIC "${PROJECT_BINARY_DIR}")
 target_link_libraries (MaxFitSimulator ${CMAKE_THREAD_LIBS_INIT})
 
+
+set(SOURCES_SUGGESTED modified_solver/main.cpp modified_solver/modified_solver.cpp baseline_solver/baseline_solver.cpp structures.cpp)
+
+add_executable(SuggestedSimulator ${SOURCES_SUGGESTED})
+target_include_directories(SuggestedSimulator PUBLIC "${PROJECT_BINARY_DIR}")
+
+
 set(TEST_DATA DataAnalysis/main.cpp structures.cpp)
 
 add_executable(TestData ${TEST_DATA})

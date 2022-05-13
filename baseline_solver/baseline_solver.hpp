@@ -35,8 +35,8 @@ namespace solvers {
 
         ~BaseSolver() override = default;
 
-    private:
-        void vm_generate_single(std::vector<Container> requests, std::vector<VM>& res,
+    protected:
+        virtual void vm_generate_single(std::vector<Container> requests, std::vector<VM>& res,
                                 double max_cpu_host, double max_memory_host, const std::vector<VM> &vm_types);
 
         const int k_vm_min_count = 3;

@@ -78,4 +78,9 @@ struct Host {
 std::vector<Host> read_hosts(std::ifstream&& in_file);
 
 double get_cpu_utilisation(const std::vector<Host>& in);
+
+double get_memory_utilisation(const std::vector<Host>& in);
+
+int get_active_hosts_count(const std::vector<Host>& in);
+
 #endif

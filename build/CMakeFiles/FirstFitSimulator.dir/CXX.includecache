@@ -15,6 +15,8 @@ vector
 -
 memory
 -
+../run.hpp
+/mnt/d/My documents/Simulator/run.hpp
 ../isolver.hpp
 /mnt/d/My documents/Simulator/isolver.hpp
 ../structures.hpp
@@ -45,6 +47,22 @@ vector
 -
 structures.hpp
 /mnt/d/My documents/Simulator/structures.hpp
+
+/mnt/d/My documents/Simulator/run.hpp
+structures.hpp
+/mnt/d/My documents/Simulator/structures.hpp
+isolver.hpp
+/mnt/d/My documents/Simulator/isolver.hpp
+iostream
+-
+iomanip
+-
+vector
+-
+memory
+-
+chrono
+-
 
 /mnt/d/My documents/Simulator/structures.cpp
 structures.hpp

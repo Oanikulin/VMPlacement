@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.o CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.o CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.o CMakeFiles/SuggestedSimulator.dir/structures.cpp.o  -o SuggestedSimulator 

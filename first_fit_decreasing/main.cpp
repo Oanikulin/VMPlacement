@@ -3,6 +3,7 @@
 #include <vector>
 #include <memory>
 
+#include "../run.hpp"
 #include "../isolver.hpp"
 #include "../structures.hpp"
 #include "solver.hpp"
@@ -23,12 +24,6 @@ int main(int argc, const char * argv[]) {
     std::cerr << "vms read" << std::endl;
     assert(vm_types.size() == 1);
     unique_ptr<solvers::ISolver> solver = make_unique<solvers::FirstFitDecreasingSolver>();
-    auto vms = solver->vm_generator(tasks, hosts, vm_types);
-    std::cerr << "vms generated" << std::endl;
-    solver->vm_placement(vms, hosts);
-    long double energy = solver->energy_consumption(hosts);
-    std::cout << fixed << setprecision(10) << "Energy consumption of mapping strategy is " << energy << "\n";
-    std::cout << fixed << setprecision(10) << "CPU utilisation is " << get_cpu_utilisation(hosts) << std::endl;
-
+    run(solver, tasks, hosts, vm_types);
     return 0;
 }

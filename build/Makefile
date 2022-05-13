@@ -124,6 +124,19 @@ TestData/fast:
 .PHONY : TestData/fast
 
 #=============================================================================
+# Target rules for targets named SuggestedSimulator
+
+# Build rule for target.
+SuggestedSimulator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SuggestedSimulator
+.PHONY : SuggestedSimulator
+
+# fast build rule for target.
+SuggestedSimulator/fast:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/build
+.PHONY : SuggestedSimulator/fast
+
+#=============================================================================
 # Target rules for targets named MaxFitSimulator
 
 # Build rule for target.
@@ -234,6 +247,7 @@ baseline_solver/baseline_solver.o: baseline_solver/baseline_solver.cpp.o
 
 # target to build an object file
 baseline_solver/baseline_solver.cpp.o:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.o
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.o
 .PHONY : baseline_solver/baseline_solver.cpp.o
 
@@ -243,6 +257,7 @@ baseline_solver/baseline_solver.i: baseline_solver/baseline_solver.cpp.i
 
 # target to preprocess a source file
 baseline_solver/baseline_solver.cpp.i:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.i
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.i
 .PHONY : baseline_solver/baseline_solver.cpp.i
 
@@ -252,6 +267,7 @@ baseline_solver/baseline_solver.s: baseline_solver/baseline_solver.cpp.s
 
 # target to generate assembly for a file
 baseline_solver/baseline_solver.cpp.s:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.s
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.s
 .PHONY : baseline_solver/baseline_solver.cpp.s
 
@@ -552,6 +568,60 @@ max_fit/solver.cpp.s:
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/max_fit/solver.cpp.s
 .PHONY : max_fit/solver.cpp.s
 
+modified_solver/main.o: modified_solver/main.cpp.o
+
+.PHONY : modified_solver/main.o
+
+# target to build an object file
+modified_solver/main.cpp.o:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.o
+.PHONY : modified_solver/main.cpp.o
+
+modified_solver/main.i: modified_solver/main.cpp.i
+
+.PHONY : modified_solver/main.i
+
+# target to preprocess a source file
+modified_solver/main.cpp.i:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.i
+.PHONY : modified_solver/main.cpp.i
+
+modified_solver/main.s: modified_solver/main.cpp.s
+
+.PHONY : modified_solver/main.s
+
+# target to generate assembly for a file
+modified_solver/main.cpp.s:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.s
+.PHONY : modified_solver/main.cpp.s
+
+modified_solver/modified_solver.o: modified_solver/modified_solver.cpp.o
+
+.PHONY : modified_solver/modified_solver.o
+
+# target to build an object file
+modified_solver/modified_solver.cpp.o:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.o
+.PHONY : modified_solver/modified_solver.cpp.o
+
+modified_solver/modified_solver.i: modified_solver/modified_solver.cpp.i
+
+.PHONY : modified_solver/modified_solver.i
+
+# target to preprocess a source file
+modified_solver/modified_solver.cpp.i:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.i
+.PHONY : modified_solver/modified_solver.cpp.i
+
+modified_solver/modified_solver.s: modified_solver/modified_solver.cpp.s
+
+.PHONY : modified_solver/modified_solver.s
+
+# target to generate assembly for a file
+modified_solver/modified_solver.cpp.s:
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.s
+.PHONY : modified_solver/modified_solver.cpp.s
+
 structures.o: structures.cpp.o
 
 .PHONY : structures.o
@@ -559,6 +629,7 @@ structures.o: structures.cpp.o
 # target to build an object file
 structures.cpp.o:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.o
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/BestFitDecreasingSimulator.dir/build.make CMakeFiles/BestFitDecreasingSimulator.dir/structures.cpp.o
@@ -574,6 +645,7 @@ structures.i: structures.cpp.i
 # target to preprocess a source file
 structures.cpp.i:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.i
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/BestFitDecreasingSimulator.dir/build.make CMakeFiles/BestFitDecreasingSimulator.dir/structures.cpp.i
@@ -589,6 +661,7 @@ structures.s: structures.cpp.s
 # target to generate assembly for a file
 structures.cpp.s:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.s
+	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/BestFitDecreasingSimulator.dir/build.make CMakeFiles/BestFitDecreasingSimulator.dir/structures.cpp.s
@@ -605,6 +678,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... TestData"
+	@echo "... SuggestedSimulator"
 	@echo "... MaxFitSimulator"
 	@echo "... BestFitSimulator"
 	@echo "... edit_cache"
@@ -651,6 +725,12 @@ help:
 	@echo "... max_fit/solver.o"
 	@echo "... max_fit/solver.i"
 	@echo "... max_fit/solver.s"
+	@echo "... modified_solver/main.o"
+	@echo "... modified_solver/main.i"
+	@echo "... modified_solver/main.s"
+	@echo "... modified_solver/modified_solver.o"
+	@echo "... modified_solver/modified_solver.i"
+	@echo "... modified_solver/modified_solver.s"
 	@echo "... structures.o"
 	@echo "... structures.i"
 	@echo "... structures.s"
