@@ -26,7 +26,7 @@ namespace solvers {
     }
 
 //Basic first fit algo - maps each VM onto first available Host, throws if it is impossible
-    void BestFitDecreasing::vm_placement(std::vector<VM> vms, std::vector<Host> &hosts) {
+    void BestFitDecreasing::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
         std::sort(vms.begin(), vms.end(), [](VM a, VM b) {
             return a.cpu_request > b.cpu_request;
         });

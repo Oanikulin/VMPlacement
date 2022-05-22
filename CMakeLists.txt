@@ -46,6 +46,10 @@ set(SOURCES_SUGGESTED modified_solver/main.cpp modified_solver/modified_solver.c
 add_executable(SuggestedSimulator ${SOURCES_SUGGESTED})
 target_include_directories(SuggestedSimulator PUBLIC "${PROJECT_BINARY_DIR}")
 
+set(SOURCES_HARMONIC harmonic_solver/main.cpp harmonic_solver/harmonic_solver.cpp baseline_solver/baseline_solver.cpp structures.cpp)
+
+add_executable(HarmonicSimulator ${SOURCES_HARMONIC})
+target_include_directories(HarmonicSimulator PUBLIC "${PROJECT_BINARY_DIR}")
 
 set(TEST_DATA DataAnalysis/main.cpp structures.cpp)
 

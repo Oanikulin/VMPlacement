@@ -83,4 +83,5 @@ double get_memory_utilisation(const std::vector<Host>& in);
 
 int get_active_hosts_count(const std::vector<Host>& in);
 
+bool get_correctness(const std::vector<Container>& cont, const std::vector<VM>& vms, const std::vector<Host>& hosts);
 #endif

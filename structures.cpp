@@ -90,3 +90,22 @@ int get_active_hosts_count(const std::vector<Host>& in) {
     }
     return cnt;
 }
+
+bool get_correctness(const std::vector<Container>& cont, const std::vector<VM>& vms, const std::vector<Host>& hosts) {
+    double cpu_needed = 0;
+    double mem_needed = 0;
+    double mem_vms = 0;
+    double cpu_vms = 0;
+    for (const auto& tmp : cont) {
+        cpu_needed += tmp.cpu_request;
+        mem_needed += tmp.memory_request;
+    }
+    for (const auto& tmp : vms) {
+        mem_vms += tmp.memory_request;
+        cpu_vms += tmp.cpu_request;
+        assert(tmp.host != -1);
+    }
+    assert(mem_vms >= mem_needed);
+    assert(cpu_vms >= cpu_needed);
+    return true;
+}

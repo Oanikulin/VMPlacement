@@ -4,7 +4,10 @@ import re
 print('Enter file name to convert')
 filename = input()
 
-out_file = open('jobs.txt', 'w')
+print('Enter output file name')
+out_name = input()
+
+out_file = open(out_name, 'w')
 job_id = dict()
 current_job_id = 0
 

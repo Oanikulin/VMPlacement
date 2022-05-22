@@ -280,6 +280,61 @@ build BestFitDecreasingSimulator.exe: CXX_EXECUTABLE_LINKER__BestFitDecreasingSi
   TARGET_IMPLIB = libBestFitDecreasingSimulator.dll.a
   TARGET_PDB = BestFitDecreasingSimulator.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target HarmonicSimulator
+
+
+#############################################
+# Order-only phony target for HarmonicSimulator
+
+build cmake_object_order_depends_target_HarmonicSimulator: phony || CMakeFiles/HarmonicSimulator.dir
+
+build CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.obj: CXX_COMPILER__HarmonicSimulator_Debug D$:/My$ documents/Simulator/harmonic_solver/main.cpp || cmake_object_order_depends_target_HarmonicSimulator
+  DEP_FILE = CMakeFiles\HarmonicSimulator.dir\harmonic_solver\main.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\HarmonicSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\HarmonicSimulator.dir\harmonic_solver
+
+build CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.obj: CXX_COMPILER__HarmonicSimulator_Debug D$:/My$ documents/Simulator/harmonic_solver/harmonic_solver.cpp || cmake_object_order_depends_target_HarmonicSimulator
+  DEP_FILE = CMakeFiles\HarmonicSimulator.dir\harmonic_solver\harmonic_solver.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\HarmonicSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\HarmonicSimulator.dir\harmonic_solver
+
+build CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.obj: CXX_COMPILER__HarmonicSimulator_Debug D$:/My$ documents/Simulator/baseline_solver/baseline_solver.cpp || cmake_object_order_depends_target_HarmonicSimulator
+  DEP_FILE = CMakeFiles\HarmonicSimulator.dir\baseline_solver\baseline_solver.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\HarmonicSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\HarmonicSimulator.dir\baseline_solver
+
+build CMakeFiles/HarmonicSimulator.dir/structures.cpp.obj: CXX_COMPILER__HarmonicSimulator_Debug D$:/My$ documents/Simulator/structures.cpp || cmake_object_order_depends_target_HarmonicSimulator
+  DEP_FILE = CMakeFiles\HarmonicSimulator.dir\structures.cpp.obj.d
+  FLAGS = -std=c++17 -pthread -g
+  INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
+  OBJECT_DIR = CMakeFiles\HarmonicSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles\HarmonicSimulator.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target HarmonicSimulator
+
+
+#############################################
+# Link the executable HarmonicSimulator.exe
+
+build HarmonicSimulator.exe: CXX_EXECUTABLE_LINKER__HarmonicSimulator_Debug CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.obj CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.obj CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.obj CMakeFiles/HarmonicSimulator.dir/structures.cpp.obj
+  FLAGS = -std=c++17 -pthread -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\HarmonicSimulator.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = HarmonicSimulator.exe
+  TARGET_IMPLIB = libHarmonicSimulator.dll.a
+  TARGET_PDB = HarmonicSimulator.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -355,8 +410,8 @@ build CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.obj: CXX_COMPIL
   OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
   OBJECT_FILE_DIR = CMakeFiles\SuggestedSimulator.dir\modified_solver
 
-build CMakeFiles/SuggestedSimulator.dir/modified_solver/baseline_solver.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/modified_solver/baseline_solver.cpp || cmake_object_order_depends_target_SuggestedSimulator
-  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\modified_solver\baseline_solver.cpp.obj.d
+build CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.obj: CXX_COMPILER__SuggestedSimulator_Debug D$:/My$ documents/Simulator/modified_solver/modified_solver.cpp || cmake_object_order_depends_target_SuggestedSimulator
+  DEP_FILE = CMakeFiles\SuggestedSimulator.dir\modified_solver\modified_solver.cpp.obj.d
   FLAGS = -std=c++17 -pthread -g
   INCLUDES = -I"D:/My documents/Simulator/cmake-build-debug"
   OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
@@ -384,7 +439,7 @@ build CMakeFiles/SuggestedSimulator.dir/structures.cpp.obj: CXX_COMPILER__Sugges
 #############################################
 # Link the executable SuggestedSimulator.exe
 
-build SuggestedSimulator.exe: CXX_EXECUTABLE_LINKER__SuggestedSimulator_Debug CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.obj CMakeFiles/SuggestedSimulator.dir/modified_solver/baseline_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/structures.cpp.obj
+build SuggestedSimulator.exe: CXX_EXECUTABLE_LINKER__SuggestedSimulator_Debug CMakeFiles/SuggestedSimulator.dir/modified_solver/main.cpp.obj CMakeFiles/SuggestedSimulator.dir/modified_solver/modified_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.obj CMakeFiles/SuggestedSimulator.dir/structures.cpp.obj
   FLAGS = -std=c++17 -pthread -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SuggestedSimulator.dir
@@ -460,6 +515,8 @@ build FirstFitDecreasingSimulator: phony FirstFitDecreasingSimulator.exe
 
 build FirstFitSimulator: phony FirstFitSimulator.exe
 
+build HarmonicSimulator: phony HarmonicSimulator.exe
+
 build MaxFitSimulator: phony MaxFitSimulator.exe
 
 build SuggestedSimulator: phony SuggestedSimulator.exe
@@ -474,7 +531,7 @@ build TestData: phony TestData.exe
 #############################################
 # Folder: D:/My documents/Simulator/cmake-build-debug
 
-build all: phony BaselineSimulator.exe MaxFitSimulator.exe FirstFitSimulator.exe FirstFitDecreasingSimulator.exe BestFitDecreasingSimulator.exe BestFitSimulator.exe SuggestedSimulator.exe TestData.exe
+build all: phony BaselineSimulator.exe MaxFitSimulator.exe FirstFitSimulator.exe FirstFitDecreasingSimulator.exe BestFitDecreasingSimulator.exe HarmonicSimulator.exe BestFitSimulator.exe SuggestedSimulator.exe TestData.exe
 
 # =============================================================================
 # Built-in targets

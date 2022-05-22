@@ -46,7 +46,7 @@ namespace solvers {
             total_cpu_request += tmp.cpu_request;
         }
         //std::cerr << "cpu limitations for " << requests.size() << " jobs with " << total_cpu_request << " requested CPU" << std::endl;
-        vm_min_cnt = std::max(vm_min_cnt, static_cast<int>(total_cpu_request / (max_cpu_host - vm_types[0].cpu_overhead) * k_vm_min_count + 1));
+        vm_min_cnt = std::max(vm_min_cnt, static_cast<int>(total_cpu_request / (max_cpu_host / k_vm_min_count- vm_types[0].cpu_overhead) * 1 + 1));
 
         //std::cerr << "vm min cnt after CPU requirements " << vm_min_cnt << std::endl;
         //memory limitation
@@ -55,7 +55,7 @@ namespace solvers {
             total_memory_request += tmp.memory_request;
         }
         //std::cerr << "memory limitations for " << requests.size() << " jobs with " << total_memory_request << " requested memory" << std::endl;
-        vm_min_cnt = std::max(vm_min_cnt, static_cast<int>(total_memory_request / (max_memory_host - vm_types[0].memory_overhead) * k_vm_min_count + 1));
+        vm_min_cnt = std::max(vm_min_cnt, static_cast<int>(total_memory_request / (max_memory_host / k_vm_min_count- vm_types[0].memory_overhead) * 1 + 1));
 
         //std::cerr << "vm min cnt after memory requirements " << vm_min_cnt << std::endl;
         std::sort(requests.begin(), requests.end(), [](const Container& a, const Container& b) {
@@ -85,7 +85,7 @@ namespace solvers {
         //std::cerr << total_cpu_request << " " << total_memory_request << " " << vm_min_cnt << " " << max_cpu_host << " " << max_memory_host << std::endl;
     }
 
-    void BaseSolver::vm_placement(std::vector<VM> vms, std::vector<Host> &hosts) {
+    void BaseSolver::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
         std::cerr << vms.size() << std::endl;
         std::sort(vms.begin(), vms.end(), [](const VM& a, const VM& b) {
             return a.cpu_request + a.memory_request > b.cpu_request + b.memory_request;
@@ -136,9 +136,11 @@ namespace solvers {
            }
            if (best_active >= 0) {
                hosts[best_active].Place(current);
+               current.host = best_active;
            } else if (best_nonactive >= 0) {
                hosts[best_nonactive].is_active = true;
                hosts[best_nonactive].Place(current);
+               current.host = best_nonactive;
            } else {
                throw std::invalid_argument("Baseline fit cannot fit VMs onto PMs");
            }

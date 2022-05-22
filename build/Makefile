@@ -124,6 +124,19 @@ TestData/fast:
 .PHONY : TestData/fast
 
 #=============================================================================
+# Target rules for targets named HarmonicSimulator
+
+# Build rule for target.
+HarmonicSimulator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HarmonicSimulator
+.PHONY : HarmonicSimulator
+
+# fast build rule for target.
+HarmonicSimulator/fast:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/build
+.PHONY : HarmonicSimulator/fast
+
+#=============================================================================
 # Target rules for targets named SuggestedSimulator
 
 # Build rule for target.
@@ -247,6 +260,7 @@ baseline_solver/baseline_solver.o: baseline_solver/baseline_solver.cpp.o
 
 # target to build an object file
 baseline_solver/baseline_solver.cpp.o:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.o
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.o
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.o
 .PHONY : baseline_solver/baseline_solver.cpp.o
@@ -257,6 +271,7 @@ baseline_solver/baseline_solver.i: baseline_solver/baseline_solver.cpp.i
 
 # target to preprocess a source file
 baseline_solver/baseline_solver.cpp.i:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.i
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.i
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.i
 .PHONY : baseline_solver/baseline_solver.cpp.i
@@ -267,6 +282,7 @@ baseline_solver/baseline_solver.s: baseline_solver/baseline_solver.cpp.s
 
 # target to generate assembly for a file
 baseline_solver/baseline_solver.cpp.s:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.s
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/baseline_solver/baseline_solver.cpp.s
 	$(MAKE) -f CMakeFiles/BaselineSimulator.dir/build.make CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.s
 .PHONY : baseline_solver/baseline_solver.cpp.s
@@ -514,6 +530,60 @@ first_fit_decreasing/solver.cpp.s:
 	$(MAKE) -f CMakeFiles/FirstFitDecreasingSimulator.dir/build.make CMakeFiles/FirstFitDecreasingSimulator.dir/first_fit_decreasing/solver.cpp.s
 .PHONY : first_fit_decreasing/solver.cpp.s
 
+harmonic_solver/harmonic_solver.o: harmonic_solver/harmonic_solver.cpp.o
+
+.PHONY : harmonic_solver/harmonic_solver.o
+
+# target to build an object file
+harmonic_solver/harmonic_solver.cpp.o:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.o
+.PHONY : harmonic_solver/harmonic_solver.cpp.o
+
+harmonic_solver/harmonic_solver.i: harmonic_solver/harmonic_solver.cpp.i
+
+.PHONY : harmonic_solver/harmonic_solver.i
+
+# target to preprocess a source file
+harmonic_solver/harmonic_solver.cpp.i:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.i
+.PHONY : harmonic_solver/harmonic_solver.cpp.i
+
+harmonic_solver/harmonic_solver.s: harmonic_solver/harmonic_solver.cpp.s
+
+.PHONY : harmonic_solver/harmonic_solver.s
+
+# target to generate assembly for a file
+harmonic_solver/harmonic_solver.cpp.s:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.s
+.PHONY : harmonic_solver/harmonic_solver.cpp.s
+
+harmonic_solver/main.o: harmonic_solver/main.cpp.o
+
+.PHONY : harmonic_solver/main.o
+
+# target to build an object file
+harmonic_solver/main.cpp.o:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.o
+.PHONY : harmonic_solver/main.cpp.o
+
+harmonic_solver/main.i: harmonic_solver/main.cpp.i
+
+.PHONY : harmonic_solver/main.i
+
+# target to preprocess a source file
+harmonic_solver/main.cpp.i:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.i
+.PHONY : harmonic_solver/main.cpp.i
+
+harmonic_solver/main.s: harmonic_solver/main.cpp.s
+
+.PHONY : harmonic_solver/main.s
+
+# target to generate assembly for a file
+harmonic_solver/main.cpp.s:
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.s
+.PHONY : harmonic_solver/main.cpp.s
+
 max_fit/main.o: max_fit/main.cpp.o
 
 .PHONY : max_fit/main.o
@@ -629,6 +699,7 @@ structures.o: structures.cpp.o
 # target to build an object file
 structures.cpp.o:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.o
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.o
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.o
@@ -645,6 +716,7 @@ structures.i: structures.cpp.i
 # target to preprocess a source file
 structures.cpp.i:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.i
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.i
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.i
@@ -661,6 +733,7 @@ structures.s: structures.cpp.s
 # target to generate assembly for a file
 structures.cpp.s:
 	$(MAKE) -f CMakeFiles/TestData.dir/build.make CMakeFiles/TestData.dir/structures.cpp.s
+	$(MAKE) -f CMakeFiles/HarmonicSimulator.dir/build.make CMakeFiles/HarmonicSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/SuggestedSimulator.dir/build.make CMakeFiles/SuggestedSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/MaxFitSimulator.dir/build.make CMakeFiles/MaxFitSimulator.dir/structures.cpp.s
 	$(MAKE) -f CMakeFiles/BestFitSimulator.dir/build.make CMakeFiles/BestFitSimulator.dir/structures.cpp.s
@@ -678,6 +751,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... TestData"
+	@echo "... HarmonicSimulator"
 	@echo "... SuggestedSimulator"
 	@echo "... MaxFitSimulator"
 	@echo "... BestFitSimulator"
@@ -719,6 +793,12 @@ help:
 	@echo "... first_fit_decreasing/solver.o"
 	@echo "... first_fit_decreasing/solver.i"
 	@echo "... first_fit_decreasing/solver.s"
+	@echo "... harmonic_solver/harmonic_solver.o"
+	@echo "... harmonic_solver/harmonic_solver.i"
+	@echo "... harmonic_solver/harmonic_solver.s"
+	@echo "... harmonic_solver/main.o"
+	@echo "... harmonic_solver/main.i"
+	@echo "... harmonic_solver/main.s"
 	@echo "... max_fit/main.o"
 	@echo "... max_fit/main.i"
 	@echo "... max_fit/main.s"

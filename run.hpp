@@ -23,6 +23,9 @@ void run(std::unique_ptr<solvers::ISolver>& solver, vector<Container> tasks, vec
     std::chrono::steady_clock::time_point vms_generated = std::chrono::steady_clock::now();
     std::cerr << "vms generated" << std::endl;
     solver->vm_placement(vms, hosts);
+    if (!get_correctness(tasks, vms, hosts)) {
+        assert(false);
+    }
     std::chrono::steady_clock::time_point vms_placed = std::chrono::steady_clock::now();
     long double energy = solver->energy_consumption(hosts);
     std::cout << fixed << setprecision(10) << "Energy consumption of mapping strategy is " << energy << "\n";

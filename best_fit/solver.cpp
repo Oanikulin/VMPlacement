@@ -25,7 +25,7 @@ namespace solvers {
         return res;
     }
 
-    void BestFit::vm_placement(std::vector<VM> vms, std::vector<Host> &hosts) {
+    void BestFit::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
         for (auto &current: vms) {
             int ans_ind = -1;
             int cpu_limit = -1;

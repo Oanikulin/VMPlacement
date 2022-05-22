@@ -25,7 +25,7 @@ namespace solvers {
         return res;
     }
 
-    void MaxFit::vm_placement(std::vector<VM> vms, std::vector<Host> &hosts) {
+    void MaxFit::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
         for (auto &current: vms) {
             int ans_ind = -1;
             int cpu_limit = -1;

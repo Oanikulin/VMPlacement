@@ -20,7 +20,7 @@ namespace solvers {
 
         ModifiedSolver() = default;
 
-        explicit ModifiedSolver(int inp) : BaseSolver(inp) {
+        explicit ModifiedSolver(int inp, int rc) : BaseSolver(inp), k_resource_limit(rc) {
 
         }
 
@@ -41,6 +41,7 @@ namespace solvers {
         const double k_w1 = 0.5;
         const double  k_w2 = 0.5;*/
 
+        double k_resource_limit = 1;
     };
 
 }

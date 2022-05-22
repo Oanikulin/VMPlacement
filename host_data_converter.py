@@ -4,7 +4,10 @@ import re
 print('Enter file name to convert')
 filename = input()
 
-out_file = open('host.txt', 'w')
+print('Enter output file name')
+out_name = input()
+
+out_file = open(out_name, 'w')
 
 with open(filename, 'r') as fd:
     csv_reader = reader(fd)
