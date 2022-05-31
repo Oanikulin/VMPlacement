@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     vector<VM> vm_types = read_vm_types(ifstream(argv[3]));
     std::cerr << "vms read" << std::endl;
     assert(vm_types.size() == 1);
-    unique_ptr<solvers::ISolver> solver = make_unique<solvers::ModifiedSolver>(3, 1);
+    unique_ptr<solvers::ISolver> solver = make_unique<solvers::ModifiedSolver>(20, 1);
     run(solver, tasks, hosts, vm_types);
     return 0;
 }

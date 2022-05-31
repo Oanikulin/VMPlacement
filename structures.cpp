@@ -18,7 +18,7 @@ std::vector<Container> read_containers(std::ifstream&& in_file) {
         if (cpu_req == 0 || mem_req == 0) {
             continue;
         }
-        if (cpu_req > 1 || mem_req > 1) {
+        if (cpu_req > 0.88 || mem_req > 0.88) {
             continue;
         }
         res.emplace_back(Container(cpu_req , mem_req , job, os));
@@ -80,6 +80,16 @@ double get_memory_utilisation(const std::vector<Host>& in) {
     return (total - available) / total;
 }
 
+double get_active_cpu(const std::vector<Host>& in) {
+    double total = 0;
+    for (const auto& tmp : in) {
+        if (!tmp.is_active) {
+            continue;
+        }
+        total += tmp.cpu_max_limit;
+    }
+    return total;
+}
 int get_active_hosts_count(const std::vector<Host>& in) {
     int cnt = 0;
     for (const auto& tmp : in) {

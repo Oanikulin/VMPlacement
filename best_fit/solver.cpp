@@ -28,7 +28,7 @@ namespace solvers {
     void BestFit::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
         for (auto &current: vms) {
             int ans_ind = -1;
-            int cpu_limit = -1;
+            double cpu_limit = -1;
             std::mutex mtx;
             std::vector<std::thread> tasks;
             for (int i = 0; i < hosts.size(); i += hosts.size() / k_thread_count) {

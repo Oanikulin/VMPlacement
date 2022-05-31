@@ -86,7 +86,7 @@ namespace solvers {
     }
 
     void BaseSolver::vm_placement(vector <VM> &vms, std::vector<Host> &hosts) {
-        std::cerr << vms.size() << std::endl;
+        //std::cerr << vms.size() << std::endl;
         std::sort(vms.begin(), vms.end(), [](const VM& a, const VM& b) {
             return a.cpu_request + a.memory_request > b.cpu_request + b.memory_request;
         });
