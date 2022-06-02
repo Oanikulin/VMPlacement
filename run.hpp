@@ -31,6 +31,7 @@ void run(std::unique_ptr<solvers::ISolver>& solver, vector<Container> tasks, vec
     std::cout << "Number of generated VMs " << vms.size() << std::endl;
     std::cout << fixed << setprecision(10) << "Energy consumption of mapping strategy is " << energy << "\n";
     std::cout << fixed << setprecision(10) << "CPU utilisation is " << get_cpu_utilisation(hosts) << std::endl;
+    std::cout << fixed << setprecision(10) << "Memory utilisation is " << get_memory_utilisation(hosts) << std::endl;
     std::cout << fixed << setprecision(10) << "Total active CPU limit " << get_active_cpu(hosts) << std::endl;
     std::cout << fixed << setprecision(10) << "Active hosts count " << get_active_hosts_count(hosts) << std::endl;
     std::cout << "Time to generate vms = " << std::chrono::duration_cast<std::chrono::microseconds>(vms_generated - begin).count() << "[µs]" << std::endl;

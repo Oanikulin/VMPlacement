@@ -21,7 +21,7 @@ with open(filename, 'r') as fd:
                     datums.extend(elem.split('|'))
                 out_file.write(re.findall("\d+.\d+", datums[5])[0] + ' ')
                 out_file.write(re.findall("\d+.\d+", datums[6])[0] + ' ')
-                out_file.write(str(float(re.findall("\d+.\d+", datums[5])[0]) / 2) + ' ')
+                out_file.write(str(float(re.findall("\d+.\d+", datums[5])[0]) / 1.5) + ' ')
                 out_file.write(re.findall("\d+.\d+", datums[5])[0] + '\n')
             except:
                 pass
