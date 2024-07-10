@@ -1,0 +1,6 @@
+add_library(baseline_simulator STATIC src/baseline.cpp)
+target_include_directories(baseline_simulator PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include/)
+target_link_libraries(baseline_simulator PRIVATE generic_solver)
+
+add_executable(BaselineSimulator main.cpp)
+target_link_libraries(BaselineSimulator PRIVATE generic_solver baseline_simulator)

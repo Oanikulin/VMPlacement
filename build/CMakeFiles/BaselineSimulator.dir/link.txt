@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/BaselineSimulator.dir/baseline_solver/main.cpp.o CMakeFiles/BaselineSimulator.dir/baseline_solver/baseline_solver.cpp.o CMakeFiles/BaselineSimulator.dir/structures.cpp.o  -o BaselineSimulator 

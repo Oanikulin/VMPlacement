@@ -1,0 +1,8 @@
+add_subdirectory(baseline)
+add_subdirectory(best_fit)
+add_subdirectory(best_fit_decreasing)
+add_subdirectory(harmonic)
+add_subdirectory(first_fit)
+add_subdirectory(first_fit_decreasing)
+add_subdirectory(max_fit)
+add_subdirectory(modified)
