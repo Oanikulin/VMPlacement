@@ -9,7 +9,7 @@ namespace solvers {
 using std::vector;
 
 std::vector<VM> SegmentedSolver::vm_generator(std::vector<Container> requests, const std::vector<Host>& hosts,
-                                             const std::vector<VM>& vm_types) {
+                                              const std::vector<VM>& vm_types) {
     std::map<std::pair<int, long long>, std::vector<Container>> classified_requests;
     std::vector<VM> res;
     int max_jobs_batch = 0;
@@ -34,7 +34,7 @@ std::vector<VM> SegmentedSolver::vm_generator(std::vector<Container> requests, c
 
 // modified ffd - https://en.wikipedia.org/wiki/First-fit-decreasing_bin_packing
 void SegmentedSolver::vm_generate_single(std::vector<Container> requests, std::vector<VM>& res, double max_cpu_host,
-                                        double max_memory_host, const std::vector<VM>& vm_types) {
+                                         double max_memory_host, const std::vector<VM>& vm_types) {
     int vm_min_cnt = 0;
 
     // cpu limitation

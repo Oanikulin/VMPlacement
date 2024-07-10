@@ -6,7 +6,7 @@
 std::vector<Container> read_containers(const std::string& in_path) {
     std::ifstream in_file(in_path);
     if (!in_file.is_open()) {
-        throw std::runtime_error("failed to read hosts due to failure to open file");
+        throw std::runtime_error("failed to read containers due to failure to open file");
     }
     std::vector<Container> res;
     double cpu_req;
@@ -50,7 +50,7 @@ std::vector<Host> read_hosts(const std::string& in_path) {
 std::vector<VM> read_vm_types(const std::string& in_path) {
     std::ifstream in_file(in_path);
     if (!in_file.is_open()) {
-        throw std::runtime_error("failed to read hosts due to failure to open file");
+        throw std::runtime_error("failed to read vms due to failure to open file");
     }
     std::vector<VM> res;
     double cpu_over;

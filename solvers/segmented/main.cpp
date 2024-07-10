@@ -2,8 +2,8 @@
 #include <iostream>
 #include <isolver.hpp>
 #include <memory>
-#include <segmented.hpp>
 #include <run.hpp>
+#include <segmented.hpp>
 #include <structures.hpp>
 #include <vector>
 

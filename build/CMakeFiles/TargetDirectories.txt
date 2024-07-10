@@ -30,6 +30,6 @@
 /home/olegn/VMPlacement/build/solvers/max_fit/CMakeFiles/MaxFit.dir
 /home/olegn/VMPlacement/build/solvers/max_fit/CMakeFiles/edit_cache.dir
 /home/olegn/VMPlacement/build/solvers/max_fit/CMakeFiles/rebuild_cache.dir
-/home/olegn/VMPlacement/build/solvers/modified/CMakeFiles/Modified.dir
-/home/olegn/VMPlacement/build/solvers/modified/CMakeFiles/edit_cache.dir
-/home/olegn/VMPlacement/build/solvers/modified/CMakeFiles/rebuild_cache.dir
+/home/olegn/VMPlacement/build/solvers/segmented/CMakeFiles/Segmented.dir
+/home/olegn/VMPlacement/build/solvers/segmented/CMakeFiles/edit_cache.dir
+/home/olegn/VMPlacement/build/solvers/segmented/CMakeFiles/rebuild_cache.dir

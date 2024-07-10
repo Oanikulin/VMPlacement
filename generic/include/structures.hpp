@@ -21,7 +21,7 @@ struct Container {
     }
 };
 
-std::vector<Container> read_containers(const std::string& in_pathe);
+std::vector<Container> read_containers(const std::string& in_path);
 
 struct VM {
     double cpu_overhead;

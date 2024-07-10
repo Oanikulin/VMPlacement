@@ -27,7 +27,14 @@ Additionally, sanity check was performed, that showed ISP to be more effective t
 
 **Build**
 
-Build can be done simply using CMake. No third party is required.
+Build can be done simply using CMake. No third party is required (e. g. using NINJA).
+
+```
+mkdir build && cd build/ && cmake -G Ninja ..
+ninja Segmented  && ./solvers/segmented/Segmented ../data/jobs_c.txt ../data/host_c.txt ../data/vm.txt
+```
+
+to run Segmented placement algorithm on dataset C.
 
 **Run**
 
