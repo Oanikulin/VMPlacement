@@ -1,14 +1,14 @@
 #include <deque>
 #include <exception>
 #include <iostream>
-#include <modified.hpp>
+#include <segmented.hpp>
 #include <structures.hpp>
 #include <vector>
 namespace solvers {
 
 using std::vector;
 
-std::vector<VM> ModifiedSolver::vm_generator(std::vector<Container> requests, const std::vector<Host>& hosts,
+std::vector<VM> SegmentedSolver::vm_generator(std::vector<Container> requests, const std::vector<Host>& hosts,
                                              const std::vector<VM>& vm_types) {
     std::map<std::pair<int, long long>, std::vector<Container>> classified_requests;
     std::vector<VM> res;
@@ -33,7 +33,7 @@ std::vector<VM> ModifiedSolver::vm_generator(std::vector<Container> requests, co
 }
 
 // modified ffd - https://en.wikipedia.org/wiki/First-fit-decreasing_bin_packing
-void ModifiedSolver::vm_generate_single(std::vector<Container> requests, std::vector<VM>& res, double max_cpu_host,
+void SegmentedSolver::vm_generate_single(std::vector<Container> requests, std::vector<VM>& res, double max_cpu_host,
                                         double max_memory_host, const std::vector<VM>& vm_types) {
     int vm_min_cnt = 0;
 

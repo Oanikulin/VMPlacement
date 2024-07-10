@@ -2,7 +2,7 @@
 #include <iostream>
 #include <isolver.hpp>
 #include <memory>
-#include <modified.hpp>
+#include <segmented.hpp>
 #include <run.hpp>
 #include <structures.hpp>
 #include <vector>
@@ -22,7 +22,7 @@ int main(int argc, const char* argv[]) {
     vector<VM> vm_types = read_vm_types(argv[3]);
     std::cerr << "vms read" << std::endl;
     assert(vm_types.size() == 1);
-    unique_ptr<solvers::ISolver> solver = make_unique<solvers::ModifiedSolver>(3, 1);
+    unique_ptr<solvers::ISolver> solver = make_unique<solvers::SegmentedSolver>(3, 1);
     run(solver, tasks, hosts, vm_types);
     return 0;
 }

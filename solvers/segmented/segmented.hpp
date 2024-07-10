@@ -10,22 +10,22 @@
 
 namespace solvers {
 
-    class ModifiedSolver : public BaseSolver {
+    class SegmentedSolver : public BaseSolver {
     public:
 
-        ModifiedSolver() = default;
+        SegmentedSolver() = default;
 
-        explicit ModifiedSolver(int inp, int rc) : BaseSolver(inp), k_resource_limit(rc) {
+        explicit SegmentedSolver(int inp, int rc) : BaseSolver(inp), k_resource_limit(rc) {
 
         }
 
-        ModifiedSolver(ModifiedSolver&) = default;
+        SegmentedSolver(SegmentedSolver&) = default;
 
-        ModifiedSolver(ModifiedSolver&&) = default;
+        SegmentedSolver(SegmentedSolver&&) = default;
 
         virtual std::vector<VM> vm_generator(std::vector<Container> requests, const std::vector<Host> &hosts, const std::vector<VM> &vm_types) override;
 
-        virtual ~ModifiedSolver() override = default;
+        virtual ~SegmentedSolver() override = default;
 
     private:
         void vm_generate_single(std::vector<Container> requests, std::vector<VM>& res,
