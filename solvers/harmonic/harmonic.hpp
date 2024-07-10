@@ -1,9 +1,4 @@
-//
-// Created by nikul on 22.02.2022.
-//
-
-#ifndef HARMONIC_FUNCTIONS_INCLUDED
-#define HARMONIC_FUNCTIONS_INCLUDED
+#pragma once
 
 #include <vector>
 #include <algorithm>
@@ -46,4 +41,3 @@ namespace solvers {
     };
 
 }
-#endif

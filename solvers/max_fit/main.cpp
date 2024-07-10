@@ -1,20 +1,19 @@
-#include <iostream>
 #include <iomanip>
-#include <vector>
-#include <memory>
-
+#include <iostream>
 #include <isolver.hpp>
-#include <structures.hpp>
-#include <run.hpp>
 #include <max_fit.hpp>
+#include <memory>
+#include <run.hpp>
+#include <structures.hpp>
+#include <vector>
 
 using namespace std;
 
-int main(int argc, const char * argv[]) {
-	if (argc < 4) {
-		cerr << "Usage arguments: task_description host_description vm_types_description\n";
-		return 1;
-	}
+int main(int argc, const char* argv[]) {
+    if (argc < 4) {
+        cerr << "Usage arguments: task_description host_description vm_types_description\n";
+        return 1;
+    }
     std::cerr << "Start" << std::endl;
     vector<Container> tasks = read_containers(argv[1]);
     std::cerr << "container read " << tasks.size() << std::endl;

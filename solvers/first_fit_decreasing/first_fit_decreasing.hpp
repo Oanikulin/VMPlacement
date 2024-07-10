@@ -1,9 +1,4 @@
-//
-// Created by nikul on 22.02.2022.
-//
-
-#ifndef SOLVER_FUNCTIONS_INCLUDED
-#define SOLVER_FUNCTIONS_INCLUDED
+#pragma once
 
 #include <vector>
 
@@ -25,4 +20,3 @@ namespace solvers {
     };
 
 }
-#endif

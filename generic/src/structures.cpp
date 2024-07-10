@@ -1,7 +1,6 @@
-#include <structures.hpp>
-
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <structures.hpp>
 #include <vector>
 
 std::vector<Container> read_containers(const std::string& in_path) {
@@ -15,14 +14,13 @@ std::vector<Container> read_containers(const std::string& in_path) {
     long long job;
     int os;
     while (in_file >> cpu_req >> mem_req >> job >> os) {
-        //std::cerr << "read " << std::endl;
         if (cpu_req == 0 || mem_req == 0) {
             continue;
         }
         if (cpu_req > 0.88 || mem_req > 0.88) {
             continue;
         }
-        res.emplace_back(Container(cpu_req , mem_req , job, os));
+        res.emplace_back(Container(cpu_req, mem_req, job, os));
     }
     return res;
 }
@@ -44,7 +42,7 @@ std::vector<Host> read_hosts(const std::string& in_path) {
     double e_idle;
     double e_full;
     while (in_file >> mem_cap >> cpu_cap >> e_idle >> e_full) {
-        res.emplace_back(Host{e_idle, e_full, mem_cap, mem_cap,cpu_cap, cpu_cap, false});
+        res.emplace_back(Host{e_idle, e_full, mem_cap, mem_cap, cpu_cap, cpu_cap, false});
     }
     return res;
 }

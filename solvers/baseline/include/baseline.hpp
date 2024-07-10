@@ -1,9 +1,4 @@
-//
-// Created by nikul on 22.02.2022.
-//
-
-#ifndef BASELINE_FUNCTIONS_INCLUDED
-#define BASELINE_FUNCTIONS_INCLUDED
+#pragma once
 
 #include <vector>
 #include <algorithm>
@@ -47,4 +42,3 @@ namespace solvers {
     };
 
 }
-#endif
