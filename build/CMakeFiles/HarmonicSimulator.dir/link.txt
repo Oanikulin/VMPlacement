@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++17 -pthread   CMakeFiles/HarmonicSimulator.dir/harmonic_solver/main.cpp.o CMakeFiles/HarmonicSimulator.dir/harmonic_solver/harmonic_solver.cpp.o CMakeFiles/HarmonicSimulator.dir/baseline_solver/baseline_solver.cpp.o CMakeFiles/HarmonicSimulator.dir/structures.cpp.o  -o HarmonicSimulator 
